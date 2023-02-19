@@ -1,0 +1,81 @@
+/*@import "./node_modules/@fontsource/iosevka/index.css";*/
+@import "https://unpkg.com/@fontsource/iosevka@4.5.4/index.css";
+
+/* EDIT THIS */
+:root {
+    font-size: 20px;
+    --rows:3;
+    --main_bg: #202020;
+    --main_fg: #cececf;
+    --secondary_fg: #cececfaa;
+    --secondary_bg: #30303080;
+    --hover_bg: hsl(185, 62%, 62%);
+    --hover_fg: #030c0c;
+}
+
+/* EDIT ENDS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "iosevka",monospace;
+    height: 100vh;
+    background: var(--main_bg);
+    color: var(--main_fg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.greet {
+    font-size: 1.25em;
+}
+
+.odkazy {
+    display: grid;
+    grid-template-columns: repeat(var(--rows),1fr);
+    gap: 1em;
+}
+
+.container {
+    background: var(--secondary_bg);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    text-align: center;
+    transition: 250ms;
+}
+
+.container:hover {
+    transform: translateY(-8px);
+}
+
+
+.title {
+    color: var(--main_fg);
+}
+
+.odkaz {
+    display: block;
+    color: var(--secondary_fg);
+    transition: 250ms;
+    border-radius: 0.25em;
+    text-decoration: none;
+}
+
+.odkaz:hover {
+    color: var(--hover_fg);
+    background: var(--hover_bg);
+}
+
+
+
